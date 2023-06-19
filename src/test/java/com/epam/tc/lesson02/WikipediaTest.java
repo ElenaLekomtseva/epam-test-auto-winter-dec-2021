@@ -25,6 +25,7 @@ public class WikipediaTest {
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
         chromeOptions.addArguments("--allowed-ips=''");
+        chromeOptions.addArguments("--headless");
         System.setProperty("webdriver.chrome.driver", path);
         driver = new ChromeDriver(chromeOptions);
 
