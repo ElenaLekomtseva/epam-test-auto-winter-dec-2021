@@ -2,7 +2,7 @@
 <suite name="first suite">
   <test name="first test">
     <classes>
-      <class name="com.epam.tc.lesson01.utils.TaxCalculationUnitTest"/>
+      <class name="com.epam.tc.lesson02.WikipediaTest"/>
     </classes>
   </test>
 </suite>
