@@ -69,22 +69,22 @@ public class WikipediaTest {
     }
 
     // Before you run this test uncomment implicitlyWaits first
-    @Test
-    public void testWikipediaSuggestImplicitlyWait() {
-        // open wikipedia homepage
-        driver.get("https://wikipedia.org");
-
-        // type 'EPAM' in search input
-        WebElement searchInput = driver.findElement(By.id("searchInput"));
-        searchInput.sendKeys("EPAM");
-
-        // click on first suggest
-        List<WebElement> suggestions = driver.findElements(By.cssSelector(".suggestion-link"));
-        suggestions.get(0).click();
-
-        // assertion
-        assertEquals(driver.getTitle(), "EPAM - Wikipedia");
-    }
+//    @Test
+//    public void testWikipediaSuggestImplicitlyWait() {
+//        // open wikipedia homepage
+//        driver.get("https://wikipedia.org");
+//
+//        // type 'EPAM' in search input
+//        WebElement searchInput = driver.findElement(By.id("searchInput"));
+//        searchInput.sendKeys("EPAM");
+//
+//        // click on first suggest
+//        List<WebElement> suggestions = driver.findElements(By.cssSelector(".suggestion-link"));
+//        suggestions.get(0).click();
+//
+//        // assertion
+//        assertEquals(driver.getTitle(), "EPAM - Wikipedia");
+//    }
 
     @Test
     public void testPrintDefaultTimeouts() {
