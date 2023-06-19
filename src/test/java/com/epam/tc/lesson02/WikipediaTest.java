@@ -24,6 +24,7 @@ public class WikipediaTest {
         String path = requireNonNull(getClass().getClassLoader().getResource("chromedriver.exe")).getPath();
         ChromeOptions chromeOptions = new ChromeOptions();
         chromeOptions.addArguments("--remote-allow-origins=*");
+        chromeOptions.addArguments("--allowed-ips=''");
         System.setProperty("webdriver.chrome.driver", path);
         driver = new ChromeDriver(chromeOptions);
 
