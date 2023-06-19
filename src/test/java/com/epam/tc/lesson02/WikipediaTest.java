@@ -9,6 +9,7 @@ import org.openqa.selenium.By;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.openqa.selenium.chrome.ChromeOptions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeMethod;
@@ -21,8 +22,10 @@ public class WikipediaTest {
     @BeforeMethod
     public void setUp() {
         String path = requireNonNull(getClass().getClassLoader().getResource("chromedriver.exe")).getPath();
+        ChromeOptions chromeOptions = new ChromeOptions();
+        chromeOptions.addArguments("--remote-allow-origins=*");
         System.setProperty("webdriver.chrome.driver", path);
-        driver = new ChromeDriver();
+        driver = new ChromeDriver(chromeOptions);
 
         // implicitly waits
         // driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));      // default 0 sec
